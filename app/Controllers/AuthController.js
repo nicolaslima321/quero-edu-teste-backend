@@ -19,7 +19,7 @@ module.exports = {
 
     return response.json({
       message: "Successfully authorized",
-      authorization: `Bearer ${token}`,
+      authorization: token,
       expiresIn: 5200
     }, 200)
   }

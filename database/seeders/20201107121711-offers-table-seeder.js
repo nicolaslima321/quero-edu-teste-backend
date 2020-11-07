@@ -4,7 +4,7 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('offers', [
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 2139.64,
           "price_with_discount": 706.08,
           "discount_percentage": 67.0,
@@ -29,7 +29,7 @@ module.exports = {
         })
       },
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 1227.05,
           "price_with_discount": 515.36,
           "discount_percentage": 58.0,
@@ -54,7 +54,7 @@ module.exports = {
         })
       },
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 1487.31,
           "price_with_discount": 520.56,
           "discount_percentage": 65.0,
@@ -79,7 +79,7 @@ module.exports = {
         })
       },
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 1668.4,
           "price_with_discount": 617.31,
           "discount_percentage": 63.0,
@@ -104,7 +104,7 @@ module.exports = {
         })
       },
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 1447.29,
           "price_with_discount": 477.61,
           "discount_percentage": 67.0,
@@ -129,7 +129,7 @@ module.exports = {
         })
       },
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 1461.16,
           "price_with_discount": 1241.99,
           "discount_percentage": 15.0,
@@ -154,7 +154,7 @@ module.exports = {
         })
       },
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 1520.0,
           "price_with_discount": 1368.0,
           "discount_percentage": 10.0,
@@ -179,7 +179,7 @@ module.exports = {
         })
       },
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 1498.0,
           "price_with_discount": 1273.3,
           "discount_percentage": 15.0,
@@ -204,7 +204,7 @@ module.exports = {
         })
       },
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 1745.22,
           "price_with_discount": 539.1,
           "discount_percentage": 69.11,
@@ -229,7 +229,7 @@ module.exports = {
         })
       },
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 1367.34,
           "price_with_discount": 539.14,
           "discount_percentage": 60.57,
@@ -254,7 +254,7 @@ module.exports = {
         })
       },
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 2038.19,
           "price_with_discount": 1259.02,
           "discount_percentage": 38.24,
@@ -279,7 +279,7 @@ module.exports = {
         })
       },
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 437.0,
           "price_with_discount": 142.9,
           "discount_percentage": 67.3,
@@ -304,7 +304,7 @@ module.exports = {
         })
       },
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 453.0,
           "price_with_discount": 186.82,
           "discount_percentage": 58.76,
@@ -329,7 +329,7 @@ module.exports = {
         })
       },
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 453.0,
           "price_with_discount": 163.03,
           "discount_percentage": 64.01,
@@ -354,7 +354,7 @@ module.exports = {
         })
       },
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 499.0,
           "price_with_discount": 159.23,
           "discount_percentage": 68.09,
@@ -379,7 +379,7 @@ module.exports = {
         })
       },
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 998.33,
           "price_with_discount": 748.75,
           "discount_percentage": 25.0,
@@ -404,7 +404,7 @@ module.exports = {
         })
       },
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 1408.63,
           "price_with_discount": 493.02,
           "discount_percentage": 65.0,
@@ -429,7 +429,7 @@ module.exports = {
         })
       },
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 1385.57,
           "price_with_discount": 692.79,
           "discount_percentage": 50.0,
@@ -454,7 +454,7 @@ module.exports = {
         })
       },
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 414.14,
           "price_with_discount": 207.07,
           "discount_percentage": 50.0,
@@ -479,7 +479,7 @@ module.exports = {
         })
       },
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 414.14,
           "price_with_discount": 207.07,
           "discount_percentage": 50.0,
@@ -504,7 +504,7 @@ module.exports = {
         })
       },
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 428.43,
           "price_with_discount": 278.48,
           "discount_percentage": 35.0,
@@ -529,7 +529,7 @@ module.exports = {
         })
       },
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 519.71,
           "price_with_discount": 222.23,
           "discount_percentage": 57.24,
@@ -554,7 +554,7 @@ module.exports = {
         })
       },
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 454.56,
           "price_with_discount": 174.01,
           "discount_percentage": 61.72,
@@ -579,7 +579,7 @@ module.exports = {
         })
       },
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 1219.86,
           "price_with_discount": 609.93,
           "discount_percentage": 50.0,
@@ -604,7 +604,7 @@ module.exports = {
         })
       },
       {
-        course: JSON.stringify({
+        offer: JSON.stringify({
           "full_price": 932.58,
           "price_with_discount": 606.18,
           "discount_percentage": 35.0,

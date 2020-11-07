@@ -2,7 +2,7 @@ var jwt = require('jsonwebtoken');
 
 module.exports = {
   verifyJWTAuthorization (request, response, next) {
-    var token = req.headers['authorization'];
+    var token = request.headers['authorization'];
 
     if (!token) {
       return response.status(401).json({
