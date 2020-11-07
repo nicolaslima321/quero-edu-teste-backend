@@ -2,3 +2,6 @@
 
 # Lock files
 *.lock
+
+# Environment file
+.env
