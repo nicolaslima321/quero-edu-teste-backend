@@ -2,12 +2,17 @@ const Sequelize = require("sequelize");
 const db = require("../../config/database")
 const sequelizeInstance = new Sequelize(db);
 
-const User = sequelizeInstance.define('users', {
-  fullName: Sequelize.STRING,
-  email: Sequelize.STRING,
-  password: Sequelize.STRING,
+const Campus = sequelizeInstance.define('campus', {
+  universityId: Sequelize.INTEGER,
+  name: Sequelize.STRING,
+  city: Sequelize.STRING,
   createdAt: Sequelize.DATE,
   updatedAt: Sequelize.DATE,
 });
 
-module.exports = User
+Campus.associate = function(models) {
+  Campus.belongsTo(models.Offer)
+  Campus.belongsTo(models.University, { foreignKey: 'universityId' })
+};
+
+module.exports = Campus

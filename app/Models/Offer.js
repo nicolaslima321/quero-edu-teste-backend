@@ -9,9 +9,17 @@ const Offer = sequelizeInstance.define('offers', {
   start_date: Sequelize.DATE,
   enrollment_semester: Sequelize.STRING,
   enabled: Sequelize.FLOAT,
-  course_id: Sequelize.INTEGER,
-  university_id: Sequelize.INTEGER,
-  campus_id: Sequelize.INTEGER
+  courseId: Sequelize.INTEGER,
+  universityId: Sequelize.INTEGER,
+  campusId: Sequelize.INTEGER,
+  createdAt: Sequelize.DATE,
+  updatedAt: Sequelize.DATE,
 });
+
+Offer.associate = function(models) {
+  Offer.hasMany(models.Course, { foreignKey: 'courseId' })
+  Offer.hasMany(models.University, { foreignKey: 'universityId' })
+  Offer.hasMany(models.Campus, { foreignKey: 'courseId' })
+};
   
 module.exports = Offer;
