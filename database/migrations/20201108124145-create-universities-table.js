@@ -7,15 +7,7 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER,
-      },
-      universityId: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'University',
-          key: 'id'
-        }
+        type: Sequelize.INTEGER(11).UNSIGNED,
       },
       name: {
         allowNull: false,

@@ -3,7 +3,7 @@ const db = require("../../config/database")
 const sequelizeInstance = new Sequelize(db);
 
 const Course = sequelizeInstance.define('courses', {
-  univeristyId: Sequelize.INTEGER,
+  universityId: Sequelize.INTEGER,
   name: Sequelize.STRING,
   kind: Sequelize.STRING,
   level: Sequelize.STRING,

@@ -1,9 +1,4 @@
-const models = require('../Models');
-
-const Offer = models.Offer;
-const Course = models.Course;
-const University = models.University;
-const Campus = models.Campus;
+const Course = require('../Models/Course');
 
 module.exports = {
   index (request, response) {
@@ -13,18 +8,25 @@ module.exports = {
   },
 
   create (request, response) {
-    const { univeristyId, name, kind, level, shift } = request.body
+    const { universityId, name, kind, level, shift } = request.body
 
     Course.create({
-      univeristyId: univeristyId, 
+      universityId: universityId, 
       name: name, 
       kind: kind, 
       level: level, 
       shift: shift
-    })
-
-    response.json({
-      message: "Im at courses contoller =]"
+    }).then((newCourse) => {
+      console.log(newCourse.get())
+      response.json({
+        message: "Course Successfully Created",
+        course: newCourse.get()
+      })
+    }).catch((err) => {
+      console.log("Error while course creation : ", err)
+      response.json({
+        message: "An error ocurred during course creation"
+      })
     })
   }
 }

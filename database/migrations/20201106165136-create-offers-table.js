@@ -7,7 +7,7 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER,
+        type: Sequelize.INTEGER(11).UNSIGNED,
       },
       full_price: {
         allowNull: false,
@@ -23,7 +23,7 @@ module.exports = {
       },
       start_date: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.STRING
       },
       enrollment_semester: {
         allowNull: false,
@@ -35,27 +35,15 @@ module.exports = {
       },
       courseId: {
         allowNull: false,
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'Course',
-          key: 'id'
-        }
+        type: Sequelize.INTEGER(11).UNSIGNED,
       },
       universityId: {
         allowNull: false,
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'University',
-          key: 'id'
-        }
+        type: Sequelize.INTEGER(11).UNSIGNED,
       },
       campusId: {
         allowNull: false,
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'Campus',
-          key: 'id'
-        }
+        type: Sequelize.INTEGER(11).UNSIGNED,
       },
       createdAt: {
         allowNull: false,

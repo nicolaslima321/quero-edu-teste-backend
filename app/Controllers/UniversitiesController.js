@@ -1,9 +1,4 @@
-const models = require('../Models');
-
-const Offer = models.Offer;
-const Course = models.Course;
-const University = models.University;
-const Campus = models.Campus;
+const University = require('../Models/University');
 
 module.exports = {
   index (request, response) {
@@ -20,7 +15,6 @@ module.exports = {
       score: score, 
       logo_url: logo_url
     }).then((newUniversity) => {
-      // The get() function allows you to recover only the DataValues of the object
       console.log(newUniversity.get())
       response.json({
         message: "University Successfully Created",
