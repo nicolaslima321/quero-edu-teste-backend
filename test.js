@@ -79,4 +79,19 @@ describe('Quero Edu - Backend', () => {
       })
     })
   })
+
+  describe('/GET offers by cheapest price', () => {
+    it('it should be able to GET the offers filtered by cheapest price', (done) => {
+    chai.request(app)
+      .get('/api/offers?filterBy=cheapest_price')
+      .set({
+        Authorization: token
+      })
+      .end((err, res) => {
+        res.should.have.status(200)
+        res.body.should.be.a('object')
+        done()
+      })
+    })
+  })
 })

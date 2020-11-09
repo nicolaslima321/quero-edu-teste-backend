@@ -1,7 +1,7 @@
 # Teste - Quero Educação
 
 ## API para exibição e filtragem de ofertas de curso
----
+
 ### Resumo
 
 O projeto foi desenvolvido utilizando **Node.JS**, com o **Express**. Foi utilizado o **ORM Sequelize** para manipulação dos Models, gerenciamento de migrations/seeders. Foi utilizado a biblioteca **chai** para confecção dos testes automatizados.
@@ -80,7 +80,7 @@ Exemplo: http//localhost:8080/api/courses?filterBy=kind&filterValue=Presencial
 
 * **`api/courses/:id [GET]`** (`id` é o id desejado)
 
-Endpoint para listagem de cursos especificados pelo ID.Esse endpoint foi feito como um recurso a mais do que foi solicitado.
+Endpoint para listagem de cursos especificados pelo ID. Esse endpoint foi feito como um recurso a mais do que foi solicitado.
 
 **Ofertas:**
 

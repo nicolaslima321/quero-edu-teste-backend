@@ -1,4 +1,6 @@
-require("dotenv-safe").config();
+require("dotenv-safe").config({
+  allowEmptyValues: true
+});
 
 const JWTAuth = require("./app/Middlewares/JWTAuth.js")
 const CacheEndpoints = require("./app/Middlewares/CacheEndpoints.js")
