@@ -7,7 +7,6 @@ module.exports = {
 
     if (cachedBody) {
       console.log("Thats is an cached body")
-      console.log(cachedBody)
       return response.json(cachedBody)
     } 
     

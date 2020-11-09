@@ -29,7 +29,7 @@ module.exports = {
       case 'kind':
         courses = await Course.findAll({ where: { 'kind': optionValue } })
         offers = courses.map((course) => {
-          this.getOffersAcordingCourses(course)
+          return this.getOffersAcordingCourses(course)
         })
         break
       
@@ -87,7 +87,7 @@ module.exports = {
   },
 
   getOffersAcordingCourses (course) {
-    Offer.findOne({ where: { courseId: course.id, enabled: 1 }})
+    return Offer.findOne({ where: { courseId: course.id, enabled: 1 }})
       .then((offer) => {
         return offer
       })
@@ -97,7 +97,7 @@ module.exports = {
   },
 
   getOffersAcordingCampus (campus) {
-    Offer.findOne({ where: { campusId: campus.id, enabled: 1 }})
+    return Offer.findOne({ where: { campusId: campus.id, enabled: 1 }})
       .then((offer) => {
         return offer
       })

@@ -20,3 +20,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(routes);
 
 app.listen(process.env.PORT || 8080);
+
+// Export of app will only to use as module through tests
+module.exports = app;

@@ -13,11 +13,13 @@ routes.get('/', function(request, response){
 
 routes.post('/api/login', AuthController.login)
 
-routes.post('/api/courses', CoursesController.create)
 routes.get('/api/courses', CoursesController.getCourses)
+routes.get('/api/courses/:courseId', CoursesController.getCourseById)
+routes.get('/api/offers', OffersController.getOffers)
+routes.get('/api/offers/:offerId', OffersController.getOfferById)
 
+routes.post('/api/courses', CoursesController.create)
 routes.post('/api/universities', UniversitiesController.create)
 
-routes.get('/api/offers', OffersController.getOffers)
 
 module.exports = routes

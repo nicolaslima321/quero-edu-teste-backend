@@ -31,6 +31,23 @@ module.exports = {
     }, 200)
   },
 
+  async getCourseById (request, response) {
+    let course = await Course.findOne({ where: { id: request.params.courseId }})
+    
+    if (typeof course == undefined) {
+      return response.json({
+        message: `Course #${request.params.courseId} was not found`
+      }, 404)
+    }
+
+    let cacheKey = '__API_QUERO__' + request.originalUrl || request.url
+    memoryCache.put(cacheKey, course, 5200);
+
+    return response.json({
+      course
+    }, 200)
+  },
+
   create (request, response) {
     const { universityId, name, kind, level, shift } = request.body
 
