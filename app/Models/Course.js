@@ -2,8 +2,9 @@ const Sequelize = require("sequelize");
 const db = require("../../config/database")
 const sequelizeInstance = new Sequelize(db);
 
-const Course = sequelizeInstance.define('courses', {
+let Course = sequelizeInstance.define('courses', {
   universityId: Sequelize.INTEGER,
+  campusId: Sequelize.INTEGER,
   name: Sequelize.STRING,
   kind: Sequelize.STRING,
   level: Sequelize.STRING,
@@ -14,7 +15,8 @@ const Course = sequelizeInstance.define('courses', {
 
 Course.associate = function(models) {
   Course.belongsTo(models.Offer)
-  Campus.belongsTo(models.University, { foreignKey: 'universityId' })
+  Course.hasOne(models.University)
+  Course.hasOne(models.Campus)
 };
 
 module.exports = Course

@@ -5,6 +5,7 @@ module.exports = {
     await queryInterface.bulkInsert('courses', [{
       // The next 5 Courses is to UNIP (universityId = 1)
         universityId: 1,
+        campusId: 1,
         name: "Engenharia Mecânica",
         kind: "Presencial",
         level: "Bacharelado",
@@ -12,6 +13,7 @@ module.exports = {
       },
       {
         universityId: 1,
+        campusId: 2,
         name: "Jornalismo",
         kind: "Presencial",
         level: "Bacharelado",
@@ -19,6 +21,7 @@ module.exports = {
       },
       {
         universityId: 1,
+        campusId: 3,
         name: "Biomedicina",
         kind: "Presencial",
         level: "Bacharelado",
@@ -26,6 +29,7 @@ module.exports = {
       },
       {
         universityId: 1,
+        campusId: 4,
         name: "Arquitetura e Urbanismo",
         kind: "Presencial",
         level: "Bacharelado",
@@ -33,6 +37,7 @@ module.exports = {
       },
       {
         universityId: 1,
+        campusId: 5,
         name: "Propaganda e Marketing",
         kind: "Presencial",
         level: "Bacharelado",
@@ -41,6 +46,7 @@ module.exports = {
       // The next three Courses is to Ahembi Morumbi (universityId = 2)
       {
         universityId: 2,
+        campusId: 6,
         name: "Jornalismo",
         kind: "Presencial",
         level: "Bacharelado",
@@ -48,6 +54,7 @@ module.exports = {
       },
       {
         universityId: 2,
+        campusId: 7,
         name: "Marketing",
         kind: "Presencial",
         level: "Bacharelado",
@@ -55,6 +62,7 @@ module.exports = {
       },
       {
         universityId: 2,
+        campusId: 6,
         name: "Biomedicina",
         kind: "Presencial",
         level: "Bacharelado",
@@ -63,6 +71,7 @@ module.exports = {
       // The next seven Courses is to UNICSUL (universityId = 3)
       {
         universityId: 3,
+        campusId: 8,
         name: "Engenharia Mecânica",
         kind: "Presencial",
         level: "Bacharelado",
@@ -70,6 +79,7 @@ module.exports = {
       },
       {
         universityId: 3,
+        campusId: 8,
         name: "Ciência da Computação",
         kind: "Presencial",
         level: "Bacharelado",
@@ -77,6 +87,7 @@ module.exports = {
       },
       {
         universityId: 3,
+        campusId: 9,
         name: "Gastronomia",
         kind: "Presencial",
         level: "Tecnólogo",
@@ -84,6 +95,7 @@ module.exports = {
       },
       {
         universityId: 3,
+        campusId: 10,
         name: "Jogos Digitais",
         kind: "EaD",
         level: "Tecnólogo",
@@ -91,6 +103,7 @@ module.exports = {
       },
       {
         universityId: 3,
+        campusId: 11,
         name: "Ciência da Computação",
         kind: "EaD",
         level: "Bacharelado",
@@ -98,6 +111,7 @@ module.exports = {
       },
       {
         universityId: 3,
+        campusId: 10,
         name: "Sistemas de Informação",
         kind: "EaD",
         level: "Bacharelado",
@@ -105,6 +119,7 @@ module.exports = {
       },
       {
         universityId: 3,
+        campusId: 8,
         name: "Ciências Econômicas",
         kind: "EaD",
         level: "Bacharelado",
@@ -113,6 +128,7 @@ module.exports = {
       // The next two Courses is to Ahanguera (universityId = 4)
       {
         universityId: 4,
+        campusId: 12,
         name: "Gestão de Recursos Humanos",
         kind: "Presencial",
         level: "Tecnólogo",
@@ -120,6 +136,7 @@ module.exports = {
       },
       {
         universityId: 4,
+        campusId: 12,
         name: "Arquitetura e Urbanismo",
         kind: "Presencial",
         level: "Bacharelado",
@@ -128,6 +145,7 @@ module.exports = {
       // The next four Courses is to Estácio (universityId = 5)
       {
         universityId: 5,
+        campusId: 13,
         name: "Farmácia",
         kind: "Presencial",
         level: "Bacharelado",
@@ -135,6 +153,7 @@ module.exports = {
       },
       {
         universityId: 5,
+        campusId: 14,
         name: "Sistemas de Informação",
         kind: "EaD",
         level: "Bacharelado",
@@ -142,6 +161,7 @@ module.exports = {
       },
       {
         universityId: 5,
+        campusId: 15,
         name: "Gestão de Recursos Humanos",
         kind: "EaD",
         level: "Tecnólogo",
@@ -149,6 +169,7 @@ module.exports = {
       },
       {
         universityId: 5,
+        campusId: 15,
         name: "Administração",
         kind: "EaD",
         level: "Bacharelado",
@@ -157,6 +178,7 @@ module.exports = {
       // The next two Courses is to UNOPAR (universityId = 6)
       {
         universityId: 6,
+        campusId: 16,
         name: "História",
         kind: "EaD",
         level: "Licenciatura",
@@ -164,6 +186,7 @@ module.exports = {
       },
       {
         universityId: 6,
+        campusId: 17,
         name: "Gestão de Recursos Humanos",
         kind: "EaD",
         level: "Tecnólogo",
@@ -172,13 +195,15 @@ module.exports = {
       // The next one Courses is to ETEP (universityId = 7)
       {
         universityId: 7,
-      name: "Administração",
-      kind: "Presencial",
-      level: "Bacharelado",
-      shift: "Noite"
+        campusId: 18,
+        name: "Administração",
+        kind: "Presencial",
+        level: "Bacharelado",
+        shift: "Noite"
       },
       {
         universityId: 7,
+        campusId: 18,
         name: "Educação Física",
         kind: "Presencial",
         level: "Bacharelado",

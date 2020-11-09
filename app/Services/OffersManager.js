@@ -18,7 +18,10 @@ module.exports = {
     switch (option) {
       case 'university_name':
         university = await University.findOne({ where: { 'name': optionValue } })
-        offers = await Offer.findAll({ where: { universityId: university.id, enabled: 1 }})
+        offers = await Course.findAll({
+          where: { universityId: university.id },
+          include: [{ model: Offer }]
+        })
         break
 
       case 'course_name':
@@ -28,29 +31,53 @@ module.exports = {
       
       case 'kind':
         courses = await Course.findAll({ where: { 'kind': optionValue } })
-        offers = courses.map((course) => {
+        offers = Promise.all(courses.map((course) => {
           return this.getOffersAcordingCourses(course)
+        }))
+        .then((offers) => {
+          return offers
+        })
+        .catch((err) => {
+          console.log(err)
         })
         break
       
       case 'level':
         courses = await Course.findAll({ where: { 'level': optionValue } })
-        offers = courses.map((course) => {
-          this.getOffersAcordingCourses(course)
+        offers = Promise.all(courses.map((course) => {
+          return this.getOffersAcordingCourses(course)
+        }))
+        .then((offers) => {
+          return offers
+        })
+        .catch((err) => {
+          console.log(err)
         })
         break
 
       case 'shift':
         courses = await Course.findAll({ where: { 'shift': optionValue } })
-        offers = courses.map((course) => {
-          this.getOffersAcordingCourses(course)
+        offers = Promise.all(courses.map((course) => {
+          return this.getOffersAcordingCourses(course)
+        }))
+        .then((offers) => {
+          return offers
+        })
+        .catch((err) => {
+          console.log(err)
         })
         break
 
       case 'city':
-        campus = await Campus.findAll({ where: { 'city': optionValue } })
-        offers = campus.map((campus) => {
-          this.getOffersAcordingCampus(campus)
+        campuses = await Campus.findAll({ where: { 'city': optionValue } })
+        offers = Promise.all(campuses.map((campus) => {
+          return this.getOffersAcordingCampus(campus)
+        }))
+        .then((offers) => {
+          return offers
+        })
+        .catch((err) => {
+          console.log(err)
         })
         break
 

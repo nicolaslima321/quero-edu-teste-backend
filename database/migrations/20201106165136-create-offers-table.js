@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     return queryInterface.createTable('offers', {
@@ -7,7 +5,7 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER(11).UNSIGNED,
+        type: Sequelize.INTEGER,
       },
       full_price: {
         allowNull: false,
@@ -34,16 +32,8 @@ module.exports = {
         type: Sequelize.FLOAT
       },
       courseId: {
+        type: Sequelize.INTEGER,
         allowNull: false,
-        type: Sequelize.INTEGER(11).UNSIGNED,
-      },
-      universityId: {
-        allowNull: false,
-        type: Sequelize.INTEGER(11).UNSIGNED,
-      },
-      campusId: {
-        allowNull: false,
-        type: Sequelize.INTEGER(11).UNSIGNED,
       },
       createdAt: {
         allowNull: false,
