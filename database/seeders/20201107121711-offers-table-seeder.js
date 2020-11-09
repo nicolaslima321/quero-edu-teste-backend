@@ -21,9 +21,9 @@ module.exports = {
         start_date: "01/08/2019",
         enrollment_semester: "2019.2",
         enabled: true,
-        courseId: 1,
+        courseId: 2,
         universityId: 1,
-        campusId: 1
+        campusId: 2
       },
       {
         full_price: 1487.31,
@@ -32,9 +32,9 @@ module.exports = {
         start_date: "01/08/2019",
         enrollment_semester: "2019.2",
         enabled: true,
-        courseId: 1,
+        courseId: 3,
         universityId: 1,
-        campusId: 1
+        campusId: 3
       },
       {
         full_price: 1668.4,
@@ -43,9 +43,9 @@ module.exports = {
         start_date: "01/08/2019",
         enrollment_semester: "2019.2",
         enabled: true,
-        courseId: 1,
+        courseId: 4,
         universityId: 1,
-        campusId: 1
+        campusId: 4
       },
       {
         full_price: 1447.29,
@@ -54,9 +54,9 @@ module.exports = {
         start_date: "01/08/2019",
         enrollment_semester: "2019.2",
         enabled: true,
-        courseId: 1,
+        courseId: 5,
         universityId: 1,
-        campusId: 1
+        campusId: 5
       },
       {
         full_price: 1461.16,
@@ -65,9 +65,9 @@ module.exports = {
         start_date: "01/08/2019",
         enrollment_semester: "2019.2",
         enabled: true,
-        courseId: 1,
+        courseId: 6,
         universityId: 2,
-        campusId: 1
+        campusId: 6
       },
       {
         full_price: 1520.0,
@@ -76,9 +76,9 @@ module.exports = {
         start_date: "01/08/2019",
         enrollment_semester: "2019.2",
         enabled: true,
-        courseId: 1,
+        courseId: 7,
         universityId: 2,
-        campusId: 1
+        campusId: 7
       },
       {
         full_price: 1498.0,
@@ -87,9 +87,9 @@ module.exports = {
         start_date: "01/02/2020",
         enrollment_semester: "2020.1",
         enabled: false,
-        courseId: 1,
+        courseId: 8,
         universityId: 2,
-        campusId: 1
+        campusId: 6
       },
       {
         full_price: 1745.22,
@@ -98,9 +98,9 @@ module.exports = {
         start_date: "01/08/2019",
         enrollment_semester: "2019.2",
         enabled: true,
-        courseId: 1,
+        courseId: 9,
         universityId: 3,
-        campusId: 1
+        campusId: 8
       },
       {
         full_price: 1367.34,
@@ -109,9 +109,9 @@ module.exports = {
         start_date: "01/08/2019",
         enrollment_semester: "2019.2",
         enabled: true,
-        courseId: 1,
+        courseId: 10,
         universityId: 3,
-        campusId: 1
+        campusId: 8
       },
       {
         full_price: 2038.19,
@@ -120,9 +120,9 @@ module.exports = {
         start_date: "01/02/2020",
         enrollment_semester: "2020.1",
         enabled: false,
-        courseId: 1,
+        courseId: 11,
         universityId: 3,
-        campusId: 1
+        campusId: 9
       },
       {
         full_price: 437.0,
@@ -131,9 +131,9 @@ module.exports = {
         start_date: "01/02/2020",
         enrollment_semester: "2020.1",
         enabled: true,
-        courseId: 1,
+        courseId: 12,
         universityId: 3,
-        campusId: 1
+        campusId: 10
       },
       {
         full_price: 453.0,
@@ -142,9 +142,9 @@ module.exports = {
         start_date: "01/08/2019",
         enrollment_semester: "2019.2",
         enabled: true,
-        courseId: 1,
+        courseId: 13,
         universityId: 3,
-        campusId: 1
+        campusId: 11
       },
       {
         full_price: 453.0,
@@ -153,9 +153,9 @@ module.exports = {
         start_date: "01/08/2019",
         enrollment_semester: "2019.2",
         enabled: true,
-        courseId: 1,
+        courseId: 14,
         universityId: 3,
-        campusId: 1
+        campusId: 10
       },
       {
         full_price: 499.0,
@@ -164,9 +164,9 @@ module.exports = {
         start_date: "01/08/2019",
         enrollment_semester: "2019.2",
         enabled: true,
-        courseId: 1,
+        courseId: 15,
         universityId: 3,
-        campusId: 1
+        campusId: 8
       },
       {
         full_price: 998.33,
@@ -175,9 +175,9 @@ module.exports = {
         start_date: "01/08/2019",
         enrollment_semester: "2019.2",
         enabled: true,
-        courseId: 1,
+        courseId: 16,
         universityId: 4,
-        campusId: 1
+        campusId: 12
       },
       {
         full_price: 1408.63,
@@ -186,9 +186,9 @@ module.exports = {
         start_date: "01/02/2020",
         enrollment_semester: "2020.1",
         enabled: true,
-        courseId: 1,
+        courseId: 17,
         universityId: 4,
-        campusId: 1
+        campusId: 12
       },
       {
         full_price: 1385.57,
@@ -197,9 +197,9 @@ module.exports = {
         start_date: "01/08/2019",
         enrollment_semester: "2019.2",
         enabled: true,
-        courseId: 1,
+        courseId: 18,
         universityId: 5,
-        campusId: 1
+        campusId: 13
       },
       {
         full_price: 414.14,
@@ -208,9 +208,9 @@ module.exports = {
         start_date: "01/08/2019",
         enrollment_semester: "2019.2",
         enabled: true,
-        courseId: 1,
+        courseId: 19,
         universityId: 5,
-        campusId: 1
+        campusId: 14
       },
       {
         full_price: 414.14,
@@ -219,9 +219,9 @@ module.exports = {
         start_date: "01/02/2020",
         enrollment_semester: "2020.1",
         enabled: true,
-        courseId: 1,
+        courseId: 20,
         universityId: 5,
-        campusId: 1
+        campusId: 15
       },
       {
         full_price: 428.43,
@@ -230,9 +230,9 @@ module.exports = {
         start_date: "01/08/2019",
         enrollment_semester: "2019.2",
         enabled: true,
-        courseId: 1,
+        courseId: 21,
         universityId: 5,
-        campusId: 1
+        campusId: 15
       },
       {
         full_price: 519.71,
@@ -241,9 +241,9 @@ module.exports = {
         start_date: "01/08/2019",
         enrollment_semester: "2019.2",
         enabled: true,
-        courseId: 1,
+        courseId: 22,
         universityId: 6,
-        campusId: 1
+        campusId: 16
       },
       {
         full_price: 454.56,
@@ -252,9 +252,9 @@ module.exports = {
         start_date: "01/08/2019",
         enrollment_semester: "2019.2",
         enabled: true,
-        courseId: 1,
+        courseId: 23,
         universityId: 6,
-        campusId: 1
+        campusId: 17
       },
       {
         full_price: 1219.86,
@@ -263,9 +263,9 @@ module.exports = {
         start_date: "01/08/2019",
         enrollment_semester: "2019.2",
         enabled: true,
-        courseId: 1,
+        courseId: 24,
         universityId: 7,
-        campusId: 1
+        campusId: 18
       },
       {
         full_price: 932.58,
@@ -274,9 +274,9 @@ module.exports = {
         start_date: "01/08/2019",
         enrollment_semester: "2019.2",
         enabled: true,
-        courseId: 1,
+        courseId: 25,
         universityId: 7,
-        campusId: 1
+        campusId: 18
       }
     ], {});
   },
