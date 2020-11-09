@@ -13,7 +13,7 @@ O projeto foi desenvolvido utilizando **Node.JS**, com o **Express**. Foi utiliz
 O projeto conta com um arquivo de variáveis de ambiente (**.env.example**), o primeiro passo é copia-lo renomeando para `.env` alterando os valores de cada chave referente ao seu uso (Como nome do banco de dados, API_KEY para configuração do JWT, entre outras informações).
 
 * **Primeiro passo**
-É necessário rodar um `npm install`, após a conclusão, podemos seguir com a criação das tablas e inserção dos dados para o banco de dados.
+É necessário rodar um `npm install`, após a conclusão, podemos seguir com a criação das tabelas e inserção dos dados para o banco de dados.
 
 * **Migrations & Seeds**
 Para realizar as migrações da tabela, execute `npx sequelize db:migrate`, após as migrações, rode os seeders com `npx sequelize db:seed:all`
@@ -105,7 +105,7 @@ Endpoint para listagem de ofertas especificadas pelo ID. Esse endpoint foi feito
 
 ### Produção
 
-Foi realizado deploy da aplicação para produção utilizando a plataforma Heroku, a API está acessível através do link http://api-quero-edu-backend/
+Foi realizado deploy da aplicação para produção utilizando a plataforma Heroku, a API está acessível através do link http://api-quero-edu.herokuapp.com/
 
 **Obs:** Por configuração interna do provedor do serviço MySQL utilizado, o auto incremento no banco de dados está com incremento de 10 (De 10 em 10), então a sequência de IDs se mostrará por (1, 11, 21, 31.. etc).
 
