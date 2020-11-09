@@ -1,10 +1,30 @@
 const Course = require('../Models/Course');
 
+let CoursesManager = require('../Services/CoursesManager.js')
+
 module.exports = {
-  index (request, response) {
-    response.json({
-      message: "Im at courses contoller =]"
+  async index (request, response) {
+    var offers = await Offer.findAll()
+
+    return response.json({
+      offers: offers
     })
+  },
+
+  async getCourses (request, response) {
+    var { filterBy, filterValue } = request.query
+
+    let courses = await CoursesManager.getFilteredCourses(filterBy, filterValue)
+    
+    if (typeof courses == undefined) {
+      return response.json({
+        message: "Theres no courses found with the filter applied."
+      }, 404)
+    }
+
+    return response.json({
+      courses
+    }, 200)
   },
 
   create (request, response) {

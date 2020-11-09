@@ -14,6 +14,7 @@ routes.get('/', function(request, response){
 routes.post('/api/login', AuthController.login)
 
 routes.post('/api/courses', CoursesController.create)
+routes.get('/api/courses', CoursesController.getCourses)
 
 routes.post('/api/universities', UniversitiesController.create)
 

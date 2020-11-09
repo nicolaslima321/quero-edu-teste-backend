@@ -2,7 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkInsert('campus', [
+    await queryInterface.bulkInsert('campuses', [
       // The next 5 Campus is to UNIP (universityId = 1)
       {
         "universityId": 1,
@@ -103,6 +103,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete('campus', null, {});
+    await queryInterface.bulkDelete('campuses', null, {});
   }
 };

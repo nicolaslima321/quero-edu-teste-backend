@@ -12,16 +12,16 @@ module.exports = {
   async getOffers (request, response) {
     var { filterBy, filterValue } = request.query
 
-    var offers = await OffersManager.getFilteredOffer(filterBy, filterValue)
-
+    let offers = await OffersManager.getFilteredOffers(filterBy, filterValue)
+    
     if (typeof offers == undefined) {
       return response.json({
         message: "Theres no offers found with the filter applied."
-      }, 404)  
+      }, 404)
     }
 
     return response.json({
       offers
-    })
+    }, 200)
   }
 }

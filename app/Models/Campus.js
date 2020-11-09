@@ -2,7 +2,7 @@ const Sequelize = require("sequelize");
 const db = require("../../config/database")
 const sequelizeInstance = new Sequelize(db);
 
-const Campus = sequelizeInstance.define('campus', {
+const Campus = sequelizeInstance.define('campuses', {
   universityId: Sequelize.INTEGER,
   name: Sequelize.STRING,
   city: Sequelize.STRING,

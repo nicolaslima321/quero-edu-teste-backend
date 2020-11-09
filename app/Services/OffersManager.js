@@ -4,17 +4,15 @@ let Course = require('./../Models/Course.js')
 let Campus = require('./../Models/Campus.js')
 
 module.exports = {
-  async getFilteredOffer (option, optionValue) {
+  async getFilteredOffers (option, optionValue) {
     let offers = {}
     let courses
     let university
     let campus
 
-    console.log(option, optionValue)
-
     /**
-     * Only an observation, i had noticed that a field 'enabled' at offers json input, then i assumed that
-     * offers that arent enabled (this is, enable is equal to 0), dont will be shown
+     * Only an observation, i had noticed that has a field 'enabled' at 'offers' json input, then i assumed that
+     * offers that arent enabled (this is, 'enable' is equal to 0), dont will be shown
      */
 
     switch (option) {
@@ -29,45 +27,82 @@ module.exports = {
         break
       
       case 'kind':
-        offers = []
-        let courses = await Course.findAll({ where: { 'kind': optionValue } })
-        await courses.forEach(async (course) => {
-          offersFound = await Offer.findOne({ where: { courseId: course.id, enabled: 1 }})
-          offers.push(offersFound)
+        courses = await Course.findAll({ where: { 'kind': optionValue } })
+        offers = courses.map((course) => {
+          this.getOffersAcordingCourses(course)
         })
         break
       
       case 'level':
-        offers = []
-        let courses = await Course.findAll({ where: { 'level': optionValue } })
-        await courses.forEach(async (course) => {
-          offersFound = await Offer.findOne({ where: { courseId: course.id, enabled: 1 }})
-          offers.push(offersFound)
+        courses = await Course.findAll({ where: { 'level': optionValue } })
+        offers = courses.map((course) => {
+          this.getOffersAcordingCourses(course)
         })
         break
 
       case 'shift':
-        offers = []
-        let courses = await Course.findAll({ where: { 'shift': optionValue } })
-        await courses.forEach(async (course) => {
-          offersFound = await Offer.findOne({ where: { courseId: course.id, enabled: 1 }})
-          offers.push(offersFound)
+        courses = await Course.findAll({ where: { 'shift': optionValue } })
+        offers = courses.map((course) => {
+          this.getOffersAcordingCourses(course)
         })
         break
 
       case 'city':
-        offers = []
-        let campus = await Campus.findAll({ where: { 'city': optionValue } })
-        await campus.forEach(async (campus) => {
-          offersFound = await Offer.findOne({ where: { campusId: campus.id, enabled: 1 }})
-          offers.push(offersFound)
+        campus = await Campus.findAll({ where: { 'city': optionValue } })
+        offers = campus.map((campus) => {
+          this.getOffersAcordingCampus(campus)
         })
         break
 
+      case 'cheapest_price':
+        offers = await Offer.findAll({
+          order: [['full_price', 'ASC']]
+        })
+        break
+
+      case 'highest_price':
+        offers = await Offer.findAll({
+          order: [['full_price', 'DESC']]
+        })
+        break
+
+      case 'cheapest_price_discount':
+        offers = await Offer.findAll({
+          order: [['price_with_discount', 'ASC']]
+        })
+        break
+
+      case 'highest_price_discount':
+        offers = await Offer.findAll({
+          order: [['price_with_discount', 'DESC']]
+        })
+        break
+
+
       default:
         return await Offer.findAll({ where: { enabled: 1 }})
-    }
+      }
 
     return offers
+  },
+
+  getOffersAcordingCourses (course) {
+    Offer.findOne({ where: { courseId: course.id, enabled: 1 }})
+      .then((offer) => {
+        return offer
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
+
+  getOffersAcordingCampus (campus) {
+    Offer.findOne({ where: { campusId: campus.id, enabled: 1 }})
+      .then((offer) => {
+        return offer
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }
 }
