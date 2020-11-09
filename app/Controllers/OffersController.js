@@ -1,3 +1,4 @@
+var memoryCache = require('memory-cache');
 let OffersManager = require('../Services/OffersManager.js')
 
 module.exports = {
@@ -19,6 +20,9 @@ module.exports = {
         message: "Theres no offers found with the filter applied."
       }, 404)
     }
+
+    let cacheKey = '__API_QUERO__' + request.originalUrl || request.url
+    memoryCache.put(cacheKey, offers, 5200);
 
     return response.json({
       offers

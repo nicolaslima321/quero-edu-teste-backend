@@ -1,3 +1,4 @@
+var memoryCache = require('memory-cache');
 const Course = require('../Models/Course');
 
 let CoursesManager = require('../Services/CoursesManager.js')
@@ -21,6 +22,9 @@ module.exports = {
         message: "Theres no courses found with the filter applied."
       }, 404)
     }
+
+    let cacheKey = '__API_QUERO__' + request.originalUrl || request.url
+    memoryCache.put(cacheKey, courses, 5200);
 
     return response.json({
       courses

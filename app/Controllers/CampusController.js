@@ -3,7 +3,7 @@ const Course = require('../Models/Campus');
 module.exports = {
   index (request, response) {
     response.json({
-      message: "Im at courses contoller =]"
+      message: "Im at campus contoller =]"
     })
   },
 
