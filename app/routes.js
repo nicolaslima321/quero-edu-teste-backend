@@ -17,6 +17,6 @@ routes.post('/api/courses', CoursesController.create)
 
 routes.post('/api/universities', UniversitiesController.create)
 
-routes.get('/api/offers', OffersController.index)
+routes.get('/api/offers', OffersController.getOffers)
 
 module.exports = routes
