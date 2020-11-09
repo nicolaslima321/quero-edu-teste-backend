@@ -94,7 +94,8 @@ filterBy - Por qual opção será filtrado
 filterValue - O valor referente a opção que o filtro está sendo
 aplicado
 
-Exemplo: http//localhost:8080/api/offers?filterBy=university_name&filterValue=UNIP
+Exemplo: http//localhost:8080/api/offers?filterBy=cheapest_price_discount (Ordena pelos menores preços com desconto)
+Exemplo: http//localhost:8080/api/offers?filterBy=university_name&filterValue=UNIP (Filtra ofertas que sejam da universidade UNIP)
 ```
 
 * `api/offers/:id [GET]` (Onde **:id** é o id desejado)
