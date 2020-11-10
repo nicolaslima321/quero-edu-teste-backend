@@ -114,4 +114,5 @@ Foi realizado deploy da aplicação para produção utilizando a plataforma Hero
 
 ### Diferenciais
 
-O Projeto conta com autenticação JWT. Cacheamento de endpoints previamente executados, para otimização de mesmas requisições futuras.
+* O Projeto conta com autenticação JWT, manipulação da mesma através de Middleware. 
+* Também conta com cacheamento de endpoints previamente executados, por meio de um Middleware (CacheEndpoints), para otimização de mesmas requisições futuras. O cacheamento está sendo aplicado para as rotas de ofertas e cursos.
