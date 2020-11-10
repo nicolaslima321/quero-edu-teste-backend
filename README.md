@@ -98,7 +98,7 @@ Exemplo: http//localhost:8080/api/offers?filterBy=cheapest_price_discount (Orden
 Exemplo: http//localhost:8080/api/offers?filterBy=university_name&filterValue=UNIP (Filtra ofertas que sejam da universidade UNIP)
 ```
 
-* `api/offers/:id [GET]` (Onde **:id** é o id desejado)
+* **`api/offers/:id [GET]`** (Onde **:id** é o id desejado)
 
 Endpoint para listagem de ofertas especificadas pelo ID. Esse endpoint foi feito como um recurso a mais do que foi solicitado.
 
