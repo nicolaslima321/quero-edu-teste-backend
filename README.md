@@ -86,7 +86,7 @@ Endpoint para listagem de cursos especificados pelo ID. Esse endpoint foi feito 
 
 * **`api/offers [GET]`**
 
-Endpoint para listagem de cursos, opcionalmente você pode adicionar query params (parâmetros GET) na URL, para fazer o filtro dos cursos.
+Endpoint para listagem de ofertas, opcionalmente você pode adicionar query params (parâmetros GET) na URL, para fazer o filtro das ofertas.
 
 **Query params**:
 ```
