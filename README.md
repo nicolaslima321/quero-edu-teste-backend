@@ -5,6 +5,7 @@
 ### Resumo
 
 O projeto foi desenvolvido utilizando **Node.JS**, com o **Express**. Foi utilizado o **ORM Sequelize** para manipulação dos Models, gerenciamento de migrations/seeders. Foi utilizado a biblioteca **chai** para confecção dos testes automatizados.
+A fonte com os dados de entrada se encontra na raiz do repositório nomeada como **`db.json`**.
 
 ---
 
@@ -75,6 +76,8 @@ filterBy - Por qual opção será filtrado
 filterValue - O valor referente a opção que o filtro está sendo
 aplicado
 
+Opções para filterBy: 'university_name', 'course_name', 'kind', 'level', 'shift', 'city', 'cheapest_price', 'highest_price', 'cheapest_price_discount' (Menores preços com desconto), 'highest_price_discount' (Maiores preços com desconto)
+
 Exemplo: http//localhost:8080/api/courses?filterBy=kind&filterValue=Presencial
 ```
 
@@ -93,6 +96,8 @@ Endpoint para listagem de ofertas, opcionalmente você pode adicionar query para
 filterBy - Por qual opção será filtrado
 filterValue - O valor referente a opção que o filtro está sendo
 aplicado
+
+Opções para filterBy: 'university_name', 'course_name', 'kind', 'level', 'shift'
 
 Exemplo: http//localhost:8080/api/offers?filterBy=cheapest_price_discount (Ordena pelos menores preços com desconto)
 Exemplo: http//localhost:8080/api/offers?filterBy=university_name&filterValue=UNIP (Filtra ofertas que sejam da universidade UNIP)
