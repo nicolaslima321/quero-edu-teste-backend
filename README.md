@@ -76,8 +76,7 @@ filterBy - Por qual opção será filtrado
 filterValue - O valor referente a opção que o filtro está sendo
 aplicado
 
-Opções para filterBy: 'university_name', 'course_name', 'kind', 'level', 'shift', 'city', 'cheapest_price', 'highest_price', 'cheapest_price_discount' (Menores preços com desconto), 'highest_price_discount' (Maiores preços com desconto)
-**Obs: Quando filterBy for alguma ordenação por preço (Mais barato, mais caro, com/sem desconto), não é necessário passar filterValue.
+Opções para filterBy: 'university_name', 'course_name', 'kind', 'level', 'shift'
 
 Exemplo: http//localhost:8080/api/courses?filterBy=kind&filterValue=Presencial
 ```
@@ -98,7 +97,8 @@ filterBy - Por qual opção será filtrado
 filterValue - O valor referente a opção que o filtro está sendo
 aplicado
 
-Opções para filterBy: 'university_name', 'course_name', 'kind', 'level', 'shift'
+Opções para filterBy: 'university_name', 'course_name', 'kind', 'level', 'shift', 'city', 'cheapest_price', 'highest_price', 'cheapest_price_discount' (Menores preços com desconto), 'highest_price_discount' (Maiores preços com desconto)
+**Obs: Quando filterBy for alguma ordenação por preço (Mais barato, mais caro, com/sem desconto), não é necessário passar filterValue.
 
 Exemplo: http//localhost:8080/api/offers?filterBy=cheapest_price_discount (Ordena pelos menores preços com desconto)
 Exemplo: http//localhost:8080/api/offers?filterBy=university_name&filterValue=UNIP (Filtra ofertas que sejam da universidade UNIP)
