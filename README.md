@@ -39,7 +39,7 @@ O desafio conta com dois endpoints principais, referentes a listagem de cursos e
 
 **Autenticação:**
 
-O projeto conta com autenticação **JWT**, a maioria dos endpoints (Todos os principais) estarão protegidos com Middlewares referente ao JWT, e não serão acessíveis a menos que seja adicionado a **`header: Authorization`** no cabeçalho de cada requisição.
+O projeto conta com autenticação **JWT**, a maioria dos endpoints (Todos os principais) estarão protegidos com Middlewares referente ao JWT, e não serão acessíveis a menos que seja adicionado a **`header: Authorization`** com o token da autorização, no cabeçalho de cada requisição.
 
 * **`api/login [POST]`**
 
